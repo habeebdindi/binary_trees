@@ -10,13 +10,13 @@ size_t binary_tree_height(const binary_tree_t *tree);
  */
 size_t binary_tree_height(const binary_tree_t *tree)
 {
-	size_t l_height, r_height;
+	size_t l_height = 0, r_height = 0;
 
-	if (!tree)
+	if (tree == NULL)
 		return (0);
-	l_height = binary_tree_height(tree->left);
-	r_height = binary_tree_height(tree->right);
-	return (max(l_height, r_height) + 1);
+	l_height = tree->left ? binary_tree_height(tree->left) + 1 : 0;
+	r_height = tree->right ? binary_tree_height(tree->right) + 1 : 0;
+	return (max(l_height, r_height));
 }
 /**
  * max - finds the maximum between two integers
