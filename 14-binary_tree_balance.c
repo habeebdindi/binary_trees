@@ -4,7 +4,7 @@
  * @tree: pointer to the root node of the tree to measure the balance factor
  *
  * Return: the balance factor, calculated using absolute value and
- * 0 if tree is NULL. 
+ * 0 if tree is NULL.
  */
 
 /* conpile this program with 9-binary_tree_height.c */
